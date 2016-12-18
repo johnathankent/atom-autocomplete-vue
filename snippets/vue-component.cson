@@ -22,7 +22,7 @@
     \t\t// render () {},
     \t\t// Options / Lifecycle Hooks
     \t\t// beforeCreate () {},
-    \t\t// crated () {},
+    \t\t// created () {},
     \t\t// beforeMount () {},
     \t\t// mounted () {},
     \t\t// beforeUpdate () {},
