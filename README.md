@@ -1,4 +1,4 @@
-# Vue.js 2.0 Autocomplete for Atom.io
+# Vue 2.0+ Autocomplete for Atom.io
 
 > Still under development **(might not be stable)**. Contributions are welcome :smiley:
 
@@ -9,11 +9,12 @@
 * partial
 * slot
 
-### Supported Directives [IN PROGRESS]
+### Supported Directives
 
 * v-text
 * v-html
 * v-if
+* v-else-if
 * v-show
 * v-else
 * v-for
