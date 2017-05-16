@@ -1,17 +1,17 @@
 {
   "name": "vue2-autocomplete",
   "main": "./lib/main",
-  "version": "0.1.0-alpha.4",
+  "version": "0.1.1",
   "description": "Vue.js 2.0+ autocomplete for Atom",
   "keywords": [
     "vue",
     "autocomplete",
     "provider"
   ],
-  "repository": "https://github.com/ealves-pt/atom-vue2-autocomplete.git",
+  "repository": "https://github.com/johnathankent/atom-vue2-autocomplete.git",
   "license": "MIT",
   "author": {
-    "name": "Eduardo Alves"
+    "name": "Johnathan Kent"
   },
   "engines": {
     "atom": ">=1.0.0 <2.0.0"
