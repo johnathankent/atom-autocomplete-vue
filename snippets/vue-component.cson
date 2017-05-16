@@ -58,18 +58,24 @@
 
     <script>
     \texport default {
-    \t\t// name: '',
+    \t\t name: '',
+
     \t\t// # Options / Data
-    \t\t// data () { return {} },
-    \t\t// props: [],
+    \t\t// data () {
+    \t\t\t// return {
+    \t\t\t// }
+    \t\t// },
+    \t\t props: {},
     \t\t// propsData: {},
     \t\t// computed: {},
     \t\t// methods: {},
     \t\t// watch: {},
+
     \t\t// # Options / DOM
     \t\t// el () {},
     \t\t// template: '',
     \t\t// render () {},
+
     \t\t// # Options / Lifecycle Hooks
     \t\t// beforeCreate () {},
     \t\t// created () {},
@@ -81,10 +87,12 @@
     \t\t// deactivated () {},
     \t\t// beforeDestroy () {},
     \t\t// destroyed () {},
+
     \t\t// # Options / Assets
     \t\t// directives: {},
     \t\t// filters: {},
     \t\t// components: {},
+
     \t\t// # Options / Misc
     \t\t// parent: null,
     \t\t// mixins: [],
