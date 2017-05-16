@@ -58,14 +58,14 @@
 
     <script>
     \texport default {
-    \t\t name: '',
+    \t\tname: '',
 
     \t\t// # Options / Data
     \t\t// data () {
-    \t\t\t// return {
-    \t\t\t// }
+    \t\t//   return {
+    \t\t//   }
     \t\t// },
-    \t\t props: {},
+    \t\tprops: {},
     \t\t// propsData: {},
     \t\t// computed: {},
     \t\t// methods: {},
