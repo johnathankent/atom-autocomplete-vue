@@ -1,4 +1,22 @@
 '.text.html.vue':
+  'Vue Docs Tag':
+    'prefix': 'vdocs',
+    'body': """
+    <!-- Documentation on how the component works goes with the function in the code, not here. This is for onboarding and information only. -->
+    <docs>
+    ## [NAME](#ID)
+
+    ### Features:
+    - [ ] Feature 1
+    - [ ] Feature 2
+    - [ ] Feature 3
+    </docs>
+
+    <glossary>
+    ## Term
+    Enter your description here.
+    </glossary>
+    """
   'Vue Template Tag':
     'prefix': 'vtemplate',
     'body': """
@@ -53,6 +71,20 @@
   'Vue New Component':
     'prefix': 'vall',
     'body': """
+    <!-- Documentation on how the component works goes with the function in the code, not here. This is for onboarding and information only. -->
+    <docs>
+    ## [NAME](#ID)
+
+    ### Features:
+    - [ ] Feature 1
+    - [ ] Feature 2
+    - [ ] Feature 3
+    </docs>
+
+    <glossary>
+    ## Term
+    Enter your description here.
+    </glossary>
     <template${1: lang="pug"}>
     </template>
 
