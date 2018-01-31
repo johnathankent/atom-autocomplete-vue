@@ -1,0 +1,25 @@
+[ignore]
+.*/build/.*
+.*/config/.*
+.*/dist/.*
+.*/docs/.*
+.*/node_modules/.*
+.*/static/.*
+
+[include]
+
+[libs]
+./flow-typed/
+
+[lints]
+
+[options]
+module.file_ext=.js
+module.file_ext=.jsx
+module.file_ext=.json
+module.file_ext=.vue
+# module.file_ext=.pug
+# module.file_ext=.styl
+
+# Set this to `true` and Flow will no longer complain when you use require() with something other than a string literal. Default: `false`
+# module.ignore_non_literal_requires

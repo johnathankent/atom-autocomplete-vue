@@ -1,6 +1,6 @@
-# Vue 2.0+ Autocomplete for Atom.io
+# Vue.js autocomplete and snippets for Atom
 
-> Still under development **(might not be stable)**. Contributions are welcome :smiley:
+Vue.js 2.0+
 
 ## Autocomplete
 
@@ -41,4 +41,4 @@ Just type `vtemplate`, `vscript` or `vstyle` to generate the respective sections
 
 ## Contribution
 
-It's always welcome :D. Just fork and open a PR.
+Contributions welcome: Fork and open a PR.
