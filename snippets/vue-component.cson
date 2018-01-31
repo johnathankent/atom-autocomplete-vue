@@ -1,137 +1,196 @@
 '.text.html.vue':
-  'Vue Docs Tag':
-    'prefix': 'vdocs',
-    'body': """
-    <!-- Documentation on how the component works goes with the function in the code, not here. This is for onboarding and information only. -->
-    <docs>
-    ## [NAME](#ID)
-
-    ### Features:
-    - [ ] Feature 1
-    - [ ] Feature 2
-    - [ ] Feature 3
-    </docs>
-
-    <glossary>
-    ## Term
-    Enter your description here.
-    </glossary>
-    """
   'Vue Template Tag':
     'prefix': 'vtemplate',
     'body': """
     <template${1: lang="pug"}>$0</template>
     """
+
+  'Vue Component Function':
+    'prefix': 'vcomponent',
+    'body': """
+    \t//  ${0}: () => ({
+    \t//    component: import('@/${1}/${2}.vue'),
+    \t//    loading: require('@/${3}/${4}.vue').default,
+    \t//    error: ${5},
+    \t//    delay: ${6: 200},
+    \t//    timeout: ${7: 5000}
+    \t//  })
+    """
+
+  'Vue Script (Quick) Tag':
+    'prefix': 'qvscript',
+    'body': """
+    <script>
+    export default {
+    \tname: '${0}',
+    \tprops: {},
+    \tdata: function () {
+    \t\treturn {}
+    \t},
+    \tcomputed: {},
+    \twatch: [],
+    \tmethods: {}
+    }
+    </script>
+    """
+
   'Vue Script Tag':
     'prefix': 'vscript',
     'body': """
     <script>
-    \texport default {
-    \t\t// name: '',
-    \t\t// # Options / Data
-    \t\t// data () { return {} },
-    \t\t// props: [],
-    \t\t// propsData: {},
-    \t\t// computed: {},
-    \t\t// methods: {},
-    \t\t// watch: {},
-    \t\t// # Options / DOM
-    \t\t// el () {},
-    \t\t// template: '',
-    \t\t// render () {},
-    \t\t// # Options / Lifecycle Hooks
-    \t\t// beforeCreate () {},
-    \t\t// created () {},
-    \t\t// beforeMount () {},
-    \t\t// mounted () {},
-    \t\t// beforeUpdate () {},
-    \t\t// updated () {},
-    \t\t// activated () {},
-    \t\t// deactivated () {},
-    \t\t// beforeDestroy () {},
-    \t\t// destroyed () {},
-    \t\t// # Options / Assets
-    \t\t// directives: {},
-    \t\t// filters: {},
-    \t\t// components: {},
-    \t\t// # Options / Misc
-    \t\t// parent: null,
-    \t\t// mixins: [],
-    \t\t// extends: {},
-    \t\t// delimiters: [ '{{', '}}' ],
-    \t\t// functional: false
+    export default {
+    \tname: '',
+    \tfunctional: <bool>,
+    \tcomponents: {
+    \t//  <ComponentName>: () => ({
+    \t//    component: import('@/<componentspath>/<ComponentName>.vue'),
+    \t//    loading: require('@/<componentspath>/<loadingComponentName>.vue').default,
+    \t//    error: <ErrorComponentName>,
+    \t//    delay: 200,
+    \t//    timeout: 5000
+    \t//  })
+    \t},
+    \tdirectives: {},
+    \tfilters: {},
+    \tmixins: [],
+    \tmodel: {},
+    \tprops: {},
+    \tdata: function () {
+    \t\treturn {}
+    \t},
+    \tcomputed: {
+    \t\t<String>: function () {
+    \t\t}
+    \t},
+    \twatch: [],
+    \tbeforeCreate: function () {},
+    \tcreated: function () {},
+    \tbeforeMount: function () {},
+    \tmounted: function () {},
+    \tbeforeUpdate: function () {},
+    \tupdated: function () {},
+    \tactivated: function () {},
+    \tdeactivated: function () {},
+    \tbeforeDestroy: function () {},
+    \tdestroyed: function () {},
+    \t// Type: (err: Error, vm: Component, info: string) => ?boolean
+    \terrorCaptured: function (Error, Component, String) {
+    \t// logic
+    \t\treturn <true|false>
+    \t},
+    \tmethods: {
+    \t\t<String>: function () {
+    \t\t}
     \t}
+    }
     </script>
     """
+
   'Vue Style Tag':
     'prefix': 'vstyle',
     'body': """
-    <style${1: lang="stylus"}${2: scoped}>$0</style>
+    <style${1: lang="stylus"}${2: scoped}>
+    \t$0
+    </style>
     """
+
   'Vue New Component':
-    'prefix': 'vall',
+    'prefix': 'vnew',
     'body': """
-    <!-- Documentation on how the component works goes with the function in the code, not here. This is for onboarding and information only. -->
-    <docs>
-    ## [NAME](#ID)
-
-    ### Features:
-    - [ ] Feature 1
-    - [ ] Feature 2
-    - [ ] Feature 3
-    </docs>
-
-    <glossary>
-    ## Term
-    Enter your description here.
-    </glossary>
-    <template${1: lang="pug"}>
+    <template lang="${1: pug}">
     </template>
 
     <script>
-    \texport default {
-    \t\tname: '',
+    // For info on options, visit: https://vuejs.org/v2/api
+    export default {
+    \t// Side Effects (triggers effects outside the component)
+    \t// Type: String
+    \tel: '',
 
-    \t\t// # Options / Data
-    \t\t// data () {
-    \t\t//   return {
-    \t\t//   }
-    \t\t// },
-    \t\tprops: {},
-    \t\t// propsData: {},
-    \t\t// computed: {},
-    \t\t// methods: {},
-    \t\t// watch: {},
+    \t// Global Awareness (requires knowledge beyond the component)
+    \t// Type: String
+    \tname: '',
+    \t// Type: Vue Instance
+    \tparent: '',
 
-    \t\t// # Options / DOM
-    \t\t// el () {},
-    \t\t// template: '',
-    \t\t// render () {},
+    \t// Component Type (changes the type of the component)
+    \t// Type: Bool
+    \tfunctional: false,
 
-    \t\t// # Options / Lifecycle Hooks
-    \t\t// beforeCreate () {},
-    \t\t// created () {},
-    \t\t// beforeMount () {},
-    \t\t// mounted () {},
-    \t\t// beforeUpdate () {},
-    \t\t// updated () {},
-    \t\t// activated () {},
-    \t\t// deactivated () {},
-    \t\t// beforeDestroy () {},
-    \t\t// destroyed () {},
+    \t// Template Dependencies (assets used in the template)
+    \t// Type: Object
+    \tcomponents: {
+    \t//  <ComponentName>: () => ({
+    \t//    component: import('@/<componentspath>/<ComponentName>.vue'),
+    \t//    loading: require('@/<componentspath>/<loadingComponentName>.vue').default,
+    \t//    error: <ErrorComponentName>,
+    \t//    delay: 200,
+    \t//    timeout: 5000
+    \t//  })
+    \t },
+    \t// Type: Object
+    \tdirectives: {},
+    \t// Type: Object
+    \tfilters: {},
 
-    \t\t// # Options / Assets
-    \t\t// directives: {},
-    \t\t// filters: {},
-    \t\t// components: {},
+    \t// Composition (merges properties into the options)
+    \t// Type: Object | Function
+    \textends: {},
+    \t// Type: Array<Object>
+    \tmixins: [],
 
-    \t\t// # Options / Misc
-    \t\t// parent: null,
-    \t\t// mixins: [],
-    \t\t// extends: {},
-    \t\t// delimiters: [ '{{', '}}' ],
-    \t\t// functional: false
-    \t}
+    \t// Interface (the interface to the component)
+    \t// Type: Boolean
+    \tinheritAttrs: true,
+    \t// Type: { prop?: String, event? String }
+    \tmodel: {},
+    \t// Type: Array<string> | Object
+    \tprops: {},
+    \t// Type: { [key: String]: any }
+    \tpropsData: {},
+
+    \t// Local State (local reactive properties)
+    \t// Type: Object | Function
+    \tdata: function () {
+    \t\treturn {}
+    \t},
+    \t// Type: { [key: string]: Function | { get: Function, set: Function } }
+    \tcomputed: {},
+
+    \t// Events (callbacks triggered by reactive events)
+    \t// Type: { [key: string]: string | Function | Object | Array }
+    \twatch: {},
+
+    \t// Lifecycle Events (in the order they are called)
+    \t// Type: Function
+    \tbeforeCreate: function () {},
+    \tcreated: function () {},
+    \tbeforeMount: function () {},
+    \tmounted: function () {},
+    \tbeforeUpdate: function () {},
+    \tupdated: function () {},
+    \tactivated: function () {},
+    \tdeactivated: function () {},
+    \tbeforeDestroy: function () {},
+    \tdestroyed: function () {},
+    \t// Type: (err: Error, vm: Component, info: string) => ?boolean
+    \terrorCaptured: function (Error, Component, String) {
+    \t// logic
+    \t\treturn <true|false>
+    \t},
+
+    \t// Non-Reactive Properties (instance properties independent of the reactivity system)
+    \t// Type: { [key: String]: Function }
+    \tmethods: {},
+
+    \t// Rendering (the declarative description of the component output)
+    \t// Type: String
+    \ttemplate: '',
+    \t// Type: (createElement: () => { VNode, ctx }) => VNode
+    \trender () {},
+    \t// Type: (createElement: () => VNode, error: Error) => VNode
+    \trenderError () {}
+    }
     </script>
 
     <style${2: lang="stylus"}${3: scoped}>
