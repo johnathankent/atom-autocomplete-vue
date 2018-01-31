@@ -2,19 +2,21 @@
   'Vue Template Tag':
     'prefix': 'vtemplate',
     'body': """
-    <template${1: lang="pug"}>$0</template>
+    <template${1: lang="pug"}>
+    \t$0
+    </template>
     """
 
   'Vue Component Function':
     'prefix': 'vcomponent',
     'body': """
-    \t//  ${0}: () => ({
-    \t//    component: import('@/${1}/${2}.vue'),
-    \t//    loading: require('@/${3}/${4}.vue').default,
-    \t//    error: ${5},
-    \t//    delay: ${6: 200},
-    \t//    timeout: ${7: 5000}
-    \t//  })
+    \${0}: () => ({
+    \tcomponent: import('@/${1}/${2}.vue'),
+    \tloading: require('@/${3}/${4}.vue').default,
+    \terror: ${5},
+    \tdelay: ${6: 200},
+    \ttimeout: ${7: 5000}
+    })
     """
 
   'Vue Script (Quick) Tag':
