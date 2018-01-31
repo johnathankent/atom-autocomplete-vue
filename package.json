@@ -1,6 +1,6 @@
 {
   "bugs": "https://github.com/johnathankent/atom-autocomplete-vue/issues",
-  "name": "vue2-autocomplete",
+  "name": "autocomplete-vue",
   "main": "./lib/main",
   "version": "0.3.0",
   "description": "Vue.js autocomplete and snippets for Atom",
